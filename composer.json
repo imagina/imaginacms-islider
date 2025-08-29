@@ -1,28 +1,29 @@
 {
-    "name": "imagina/islider",
-    "description": "",
-    "authors": [
-        {
-            "name": "Imagina Colombia",
-            "email": "soporte@imaginacolombia.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [],
-            "aliases": {}
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\Islider\\": "app/",
-            "Modules\\Islider\\Database\\Factories\\": "database/factories/",
-            "Modules\\Islider\\Database\\Seeders\\": "database/Seeders/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Modules\\Islider\\Tests\\": "tests/"
-        }
+  "name": "imagina/islider-module",
+  "description": "Imagina islider laravel module",
+  "type": "laravel-module",
+  "authors": [
+    {
+      "name": "Imagina Colombia",
+      "email": "soporte@imaginacolombia.com"
     }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [],
+      "aliases": {}
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Modules\\Islider\\": "app/",
+      "Modules\\Islider\\Database\\Factories\\": "database/factories/",
+      "Modules\\Islider\\Database\\Seeders\\": "database/Seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Islider\\Tests\\": "tests/"
+    }
+  }
 }
