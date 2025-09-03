@@ -34,6 +34,7 @@ class Slide extends CoreModel
   ];
   public array $translatedAttributes = [
     'title',
+    'caption',
     'uri',
     'url',
     'active',
@@ -46,14 +47,8 @@ class Slide extends CoreModel
     'page_id',
     'sort_order',
     'target',
-    'title',
-    'caption',
-    'uri',
-    'url',
     'type',
-    'active',
     'external_image_url',
-    'custom_html',
     'responsive',
     'options'
   ];
