@@ -47,18 +47,6 @@ class EloquentSliderRepository extends EloquentCoreRepository implements SliderR
          *
          */
 
-        //add filter by search
-        if (isset($filter->search)) {
-            //find search in columns
-            //find search in columns Customer_name and Customer_Last_Name
-            $query->where(function ($query) use ($filter) {
-                $query->where('id', 'like', '%' . $filter->search . '%')
-                    ->orWhere('title', 'like', '%' . $filter->search . '%')
-                    ->orWhere('updated_at', 'like', '%' . $filter->search . '%')
-                    ->orWhere('created_at', 'like', '%' . $filter->search . '%');
-            });
-        }
-
         //Response
         return $query;
     }

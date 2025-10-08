@@ -65,6 +65,12 @@ class Slide extends CoreModel
   ];
 
   /**
+   * Attributes to search
+   * The following attributes are added by default: id,title
+   */
+  public $searchable = ['summary'];
+
+  /**
    * Relation Media
    * Make the Many To Many Morph
    */
@@ -80,5 +86,4 @@ class Slide extends CoreModel
   {
     return $this->belongsTo(Slider::class);
   }
-
 }

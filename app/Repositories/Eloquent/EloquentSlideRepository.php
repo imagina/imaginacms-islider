@@ -46,19 +46,6 @@ class EloquentSlideRepository extends EloquentCoreRepository implements SlideRep
          * if (isset($filter->status)) $query->where('status', $filter->status);
          *
          */
-        //add filter by search
-        if (isset($filter->search) && $filter->search !== '') {
-            $term = $filter->search;
-
-            $query->where(function ($query) use ($term) {
-                $query->whereHas('translations', function ($query) use ($term) {
-                    $query->where('title', 'LIKE', "%{$term}%")
-                        ->orWhere('summary', 'LIKE', "%{$term}%");
-                })->orWhere('id', 'LIKE', "%{$term}%")
-                    ->orWhere('updated_at', 'LIKE', "%{$term}%")
-                    ->orWhere('created_at', 'LIKE', "%{$term}%");
-            });
-        }
 
         //Response
         return $query;
